@@ -1,0 +1,6 @@
+.env
+node_modules/
+coverage/
+*.exe
+/matrix-qr-api/server
+Reto.zip

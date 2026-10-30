@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #222;
+  background: #f4f4f4;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 24px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+header p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+}
+
+main {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+
+h3 {
+  margin: 16px 0 8px;
+  font-size: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin-top: 4px;
+  padding: 6px 8px;
+  font: inherit;
+  border: 1px solid #bbb;
+}
+
+textarea {
+  max-width: 100%;
+  font-family: Consolas, "Courier New", monospace;
+}
+
+button {
+  padding: 7px 16px;
+  font: inherit;
+  color: #fff;
+  background: #2f5d8a;
+  border: 1px solid #2f5d8a;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #264b70;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+button.secondary {
+  color: #333;
+  background: #fff;
+  border-color: #bbb;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.hint {
+  margin: 0 0 8px;
+  color: #666;
+  font-size: 13px;
+}
+
+#message {
+  min-height: 1em;
+  margin: 0 0 16px;
+}
+
+#message.error {
+  color: #b00020;
+}
+
+.matrices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.matrices > div {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table.matrix td {
+  padding: 4px 10px;
+  text-align: right;
+  font-family: Consolas, "Courier New", monospace;
+  border: 1px solid #e2e2e2;
+}
+
+table.stats th,
+table.stats td {
+  padding: 5px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+table.stats th {
+  font-weight: normal;
+  color: #555;
+}

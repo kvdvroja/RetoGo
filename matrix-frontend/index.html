@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Factorización QR</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Factorización QR</h1>
+    <p id="session-status">Sin sesión</p>
+  </header>
+
+  <main>
+    <section id="login-section">
+      <h2>Acceso</h2>
+      <form id="login-form">
+        <label>
+          Usuario
+          <input type="text" name="username" autocomplete="username" required>
+        </label>
+        <label>
+          Contraseña
+          <input type="password" name="password" autocomplete="current-password" required>
+        </label>
+        <button type="submit">Ingresar</button>
+      </form>
+    </section>
+
+    <section id="matrix-section" hidden>
+      <h2>Matriz de entrada</h2>
+      <p class="hint">Una fila por línea. Separa los valores con espacios o comas. También se acepta JSON, por ejemplo [[1,2],[3,4]].</p>
+      <form id="matrix-form">
+        <textarea name="matrix" rows="6" spellcheck="false" required>12 -51 4
+6 167 -68
+-4 24 -41</textarea>
+        <div class="actions">
+          <button type="submit">Calcular</button>
+          <button type="button" id="logout" class="secondary">Cerrar sesión</button>
+        </div>
+      </form>
+    </section>
+
+    <p id="message" role="status"></p>
+
+    <section id="results" hidden>
+      <h2>Resultado</h2>
+      <div class="matrices">
+        <div>
+          <h3>Q</h3>
+          <div id="q-table"></div>
+        </div>
+        <div>
+          <h3>R</h3>
+          <div id="r-table"></div>
+        </div>
+      </div>
+
+      <h3>Estadísticas</h3>
+      <table class="stats">
+        <tbody id="stats-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+services:
+  matrix-frontend:
+    build: .
+    environment:
+      GO_API_URL: ${GO_API_URL:-http://host.docker.internal:8080}
+    ports:
+      - "8000:80"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
